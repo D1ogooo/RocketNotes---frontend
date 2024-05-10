@@ -12,21 +12,21 @@ function Home() {
   return (
     <Container>
       <Brand>
-        <h1>RocketNotes</h1>
+       <h1>RocketNotes</h1>
       </Brand>
 
       <Header />
 
       <Menu>
-        <li>
-          <ButtonText title="Todos" />
-        </li>
-        <li>
-          <ButtonText title="React" />
-        </li>
-        <li>
-          <ButtonText title="Nodejs" />
-        </li>
+       <li>
+        <ButtonText title="Todos" />
+       </li>
+       <li>
+        <ButtonText title="React" />
+       </li>
+       <li>
+        <ButtonText title="Nodejs" />
+       </li>
       </Menu>
 
       <Search>
@@ -36,12 +36,12 @@ function Home() {
       <Content>
         <Section title="Minhas notas">
           <Note
-            data={{
-              title: 'React',
-              tags: [
-                { id: '1', name: 'react' },
-                { id: '2', name: 'rocketseat' },
-              ],
+           data={{
+            title: 'React',
+             tags: [
+              { id: '1', name: 'react' },
+              { id: '2', name: 'rocketseat' },
+             ],
             }}
           />
         </Section>
