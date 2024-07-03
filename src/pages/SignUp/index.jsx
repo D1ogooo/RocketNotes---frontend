@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { api } from '../../services/api';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { FiLock, FiMail, FiUser } from 'react-icons/fi';
 import { Background, Container, Form } from './styles';
 import Button from '../../components/Button';
 import CustomInput from '../../components/Input';
 
 function SignUp() {
+  const navigate = useNavigate()
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -19,6 +20,7 @@ function SignUp() {
     api.post('/users', { name, email, password })
       .then(() => {
         alert("Usuário cadastrado com sucesso!");
+        navigate('/')
       })
       .catch((error) => {
         if (error.response) {
@@ -45,7 +47,7 @@ function SignUp() {
         <Button title="Cadastrar" onClick={handleSignUp} />
 
         <Link to="/">
-          Voltar para o login
+         Voltar para o login
         </Link>
       </Form>
     </Container>
